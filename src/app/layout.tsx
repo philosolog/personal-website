@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   	title: "Aaron Wang",
-	description: "Aspiring undergraduate with a fervor for pure mathematics, computer science, and computational neuroscience.",
+	description: "The aspiring undergraduate with a fervor for pure mathematics, computer science, and computational neuroscience.",
 };
 
 export default function RootLayout({
