@@ -7,7 +7,7 @@ export const MaskContainer = ({
 	children,
 	revealText,
 	size = 0,
-	revealSize = 250,
+	revealSize = 300,
 	className,
 }: {
 	children?: string | React.ReactNode;
@@ -67,12 +67,7 @@ export const MaskContainer = ({
 					{children}
 				</div>
 			</motion.div>
-
-			<div className="w-full h-full flex items-center justify-center  text-white">
-				<h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-					{revealText}
-				</h1>
-			</div>
+			{revealText}
 		</motion.div>
 	);
 };
