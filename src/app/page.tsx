@@ -1,7 +1,17 @@
 "use client";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
-function SVGMaskEffectDemo() {
+const socials = [
+	{
+		id: 1,
+		name: "philosolog",
+		designation: "Discord",
+		image: "assets/discord.svg",
+	},
+];
+
+function main() {
 	return (
 		<div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
 			<div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
@@ -21,8 +31,11 @@ function SVGMaskEffectDemo() {
 					The aspiring undergraduate with a fervor for pure mathematics, computer science, and computational neuroscience.
 				</p>
 			</div>
+			<div className="flex flex-row items-center justify-center mb-10 w-full">
+				<AnimatedTooltip items={socials} />
+			</div>
 		</div>
 	);
-}
+};
 
-export default SVGMaskEffectDemo;
+export default main;
