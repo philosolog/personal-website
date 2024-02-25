@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html::-webkit-scrollbar {
+  display: none;
+}
 html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   scroll-behavior: smooth;
 }
 body {
 	background: #000;
+	user-select: none;
+	/* TODO: Custom cursor (animated). */
 }
 hr {
     border: 0;

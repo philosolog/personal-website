@@ -48,11 +48,10 @@ export const MaskContainer = ({
 			<motion.div
 				className="w-full h-full flex items-center justify-center text-6xl absolute text-white [mask-image:url(/mask.svg)] [mask-size:40px] [mask-repeat:no-repeat]"
 				animate={{
-					WebkitMaskPosition: `${mousePosition.x - maskSize / 2}px ${mousePosition.y - maskSize / 2
-						}px`,
+					WebkitMaskPosition: `${mousePosition.x - maskSize / 2}px ${mousePosition.y - maskSize / 2}px`,
 					WebkitMaskSize: `${maskSize}px`,
 				}}
-				transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+				transition={{ type: "tween", ease: "backOut", duration: 0.5}}
 			>
 				<div className="absolute inset-0 bg-black h-full w-full" />
 				<div
@@ -62,7 +61,7 @@ export const MaskContainer = ({
 					onMouseLeave={() => {
 						setIsHovered(false);
 					}}
-					className="max-w-4xl mx-auto text-center text-white  text-4xl font-bold relative"
+					className="w-full h-auto z-50"
 				>
 					{children}
 				</div>

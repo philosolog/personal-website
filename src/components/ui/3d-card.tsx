@@ -30,8 +30,8 @@ export const CardContainer = ({
 		if (!containerRef.current) return;
 		const { left, top, width, height } =
 			containerRef.current.getBoundingClientRect();
-		const x = (e.clientX - left - width / 2) / 90;
-		const y = (e.clientY - top - height / 2) / 90;
+		const x = (e.clientX - left - width / 2) / 15;
+		const y = (e.clientY - top - height / 2) / 15;
 		containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 	};
 
@@ -86,7 +86,7 @@ export const CardBody = ({
 	return (
 		<div
 			className={cn(
-				"h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+				"h-auto w-auto [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
 				className
 			)}
 		>
