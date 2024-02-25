@@ -32,7 +32,18 @@ module.exports = {
 					'900': '#11563a',
 					'950': '#03301f',
 				},
-			}
+			},
+			animation: {
+				scroll:
+					"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+			},
+			keyframes: {
+				scroll: {
+					to: {
+						transform: "translate(calc(-50% - 0.5rem))",
+					},
+				},
+			},
 		},
 	},
 	plugins: [

@@ -1,6 +1,9 @@
 "use client";
+import Image from "next/image";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import github_logo from '@/assets/github.svg';
 
 const socials = [
@@ -13,7 +16,7 @@ const socials = [
 	},
 ];
 
-function revealer() {
+function name_revealer() {
 	return (
 		<div className="p-4 max-w-7xl  mx-auto relative w-full pt-20">
 			<MaskContainer
@@ -41,13 +44,71 @@ function socials_bar() {
 		</div>
 	)
 };
+function bento_grid() {
+	const Skeleton = () => (
+		<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+	);
+	const items = [
+		{
+			title: "Tools",
+			description: "",
+			header: <Skeleton />,
+			className: "md:col-span-2",
+		},
+		{
+			title: "Projects",
+			description: "",
+			header: <Skeleton />,
+			className: "md:col-span-1",
+		},
+		{
+			title: "About",
+			description: "",
+			header: <Skeleton />,
+			className: "md:col-span-1",
+		},
+		{
+			title: "Blog",
+			description:
+				"",
+			header: <Skeleton />,
+			className: "md:col-span-2",
+		},
+	];
+
+	return (
+		<BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+			{items.map((item, i) => (
+				<BentoGridItem
+					key={i}
+					title={item.title}
+					description={item.description}
+					header={item.header}
+					className={item.className}
+				/>
+			))}
+		</BentoGrid>
+	);
+};
+function pop_card() {
+	return (
+		<CardContainer className="inter-var">
+			<CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[50rem] h-full rounded-xl p-2 border  ">
+				{bento_grid()}
+			</CardBody>
+		</CardContainer>
+	);
+};
 function main() {
 	return (
-		<div className="absolute m-auto w-full h-full items-center justify-center">
-			{revealer()}
-			<hr />
-			<br />
-			{socials_bar()}
+		<div className="absolute m-auto w-full h-[200%] items-center justify-center">
+			<div className="relative items-center justify-center h-[50%]">
+				{name_revealer()}
+				<hr />
+			</div>
+			<div className="flex relative items-center justify-center h-[50%]">
+				{pop_card()}
+			</div>
 		</div>
 	);
 };
