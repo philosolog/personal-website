@@ -30,8 +30,8 @@ export const CardContainer = ({
 		if (!containerRef.current) return;
 		const { left, top, width, height } =
 			containerRef.current.getBoundingClientRect();
-		const x = (e.clientX - left - width / 2) / 15;
-		const y = (e.clientY - top - height / 2) / 15;
+		const x = (e.clientX - left - width / 2) / 25;
+		const y = (e.clientY - top - height / 2) / 25;
 		containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 	};
 
@@ -49,7 +49,7 @@ export const CardContainer = ({
 		<MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
 			<div
 				className={cn(
-					"p-auto flex items-center justify-center",
+					"py-20 flex items-center justify-center",
 					containerClassName
 				)}
 				style={{
@@ -62,7 +62,7 @@ export const CardContainer = ({
 					onMouseMove={handleMouseMove}
 					onMouseLeave={handleMouseLeave}
 					className={cn(
-						"flex items-center justify-center relative transition-all duration-1000 ease-linear",
+						"flex items-center justify-center relative transition-all duration-200 ease-linear",
 						className
 					)}
 					style={{
@@ -86,7 +86,7 @@ export const CardBody = ({
 	return (
 		<div
 			className={cn(
-				"h-auto w-auto [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+				"h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
 				className
 			)}
 		>

@@ -18,9 +18,6 @@ module.exports = {
 	darkMode: "class",
 	theme: {
 		extend: {
-			cursor: {
-				'green_dot': 'url(/assets/green_dot), default',
-			},
 			colors: {
 				'jade': {
 					'50': '#effef7',
