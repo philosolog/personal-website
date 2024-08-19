@@ -6,7 +6,7 @@ import "./home.css"
 // *: Fonts
 import { Hanken_Grotesk } from "next/font/google";
 
-export const hanken_grotesk = Hanken_Grotesk({
+const hanken_grotesk = Hanken_Grotesk({
 	subsets: ['latin'],
 	display: 'swap',
 })
