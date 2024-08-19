@@ -4,9 +4,9 @@ import "./home.css"
 // *: Components
 
 // *: Fonts
-import { Hanken_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 
-export const hanken_grotesk = Hanken_Grotesk({
+export const inter = Inter({
 	subsets: ['latin'],
 	display: 'swap',
 })
@@ -27,7 +27,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<main className={hanken_grotesk.className}>
+				<main className={inter.className}>
 					{children}
 				</main>
 			</body>
