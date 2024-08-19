@@ -1,0 +1,70 @@
+html::-webkit-scrollbar {
+	display: none;
+}
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+}
+
+@keyframes reveal-down {
+	0% {
+		transform: translate(0,-100%);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}
+@keyframes reveal-up {
+	0% {
+		transform: translate(0,100%);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}
+@keyframes reveal-left {
+	0% {
+		transform: translate(100%,0);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}
+.philosolog_logo_big {
+	display: block;
+	animation: reveal-left 0.25s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+.philosolog_title {
+	overflow: hidden;
+	line-height: auto;
+}
+.philosolog_title p {
+	display: block;
+	animation: reveal-down 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.button_biograph {
+	overflow: hidden;
+	line-height: auto;
+}
+.button_biograph span {
+	display: block;
+	animation: reveal-up 0.25s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+.button_projects {
+	overflow: hidden;
+	line-height: auto;
+}
+.button_projects span {
+	display: block;
+	animation: reveal-up 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+.button_blog {
+	overflow: hidden;
+	line-height: auto;
+}
+.button_blog span {
+	display: block;
+	animation: reveal-up 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
