@@ -27,7 +27,7 @@ export async function sanityFetch<QueryResponse>({
 	const isDevelopment = process.env.NODE_ENV === "development";
 
 	return client
-		.withConfig({ useCdn: true })
+		.withConfig({ useCdn: false }) // Note: Set to false in order to load quicker. See this if any issues arise. Page-open is a bit delayed
 		.fetch<QueryResponse>(query, params, {
 			cache: isDevelopment || isDraftMode ? undefined : "force-cache",
 			...(isDraftMode && {
