@@ -24,9 +24,7 @@ export const metadata: Metadata = {
 		siteName: 'philosolog',
 		images: [
 			{
-				url: 'https://philosolog.com/philosolog_logo_dark.jpg', // Must be an absolute URL
-				width: 800,
-				height: 600,
+				url: 'https://philosolog.com/philosolog_logo_dark.jpg',
 			},
 		],
 		locale: 'en_US',
