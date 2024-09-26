@@ -4,9 +4,9 @@ import "./home.css"
 // *: Components
 
 // *: Fonts
-import { Hanken_Grotesk } from "next/font/google";
+import { Roboto } from "next/font/roboto";
 
-const hanken_grotesk = Hanken_Grotesk({
+const roboto = Roboto({
 	subsets: ['latin'],
 	display: 'swap',
 })
@@ -38,7 +38,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en" className={hanken_grotesk.className}>
+		<html lang="en" className={roboto.className}>
 			<body>
 				<main>
 					{children}
