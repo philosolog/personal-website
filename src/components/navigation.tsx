@@ -6,6 +6,7 @@ import blog_button from "@/../public/blog.svg";
 
 export default function Navigation() {
 	return (
+		// TODO: Responsive navigation bar.
 		<div className="absolute m-2 h-50% items-center grid grid-cols-1 grid-rows-3 gap-2">
 			<Link href="/">
 				<Image
