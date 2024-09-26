@@ -2,7 +2,6 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { postsQuery } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
 import Posts from "components/Posts";
-import Menu from "components/Menu";
 
 export default async function Blog() {
 	const posts = await sanityFetch<SanityDocument[]>({ query: postsQuery });

@@ -2,13 +2,14 @@
 import "@/app/globals.css";
 import "./home.css"
 // *: Components
-
+import Navigation from "components/navigation";
 // *: Fonts
-import { Roboto } from "next/font/roboto";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
 	subsets: ['latin'],
 	display: 'swap',
+	weight: ['400', '700'],
 })
 
 // *: Metadata
@@ -41,6 +42,7 @@ export default function RootLayout({
 		<html lang="en" className={roboto.className}>
 			<body>
 				<main>
+					<Navigation />
 					{children}
 				</main>
 			</body>
